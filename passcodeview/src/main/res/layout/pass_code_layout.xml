@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="pass_code_layout"
+            type="th.co.digio.passcodeview.PassCodeView"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_4"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_5"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/dot_pin_6"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/circle_pin_not_filled"/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center">
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_1"
+                    android:text="1"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_2"
+                    android:text="2"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_3"
+                    android:text="3"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center">
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_4"
+                    android:text="4"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_5"
+                    android:text="5"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_6"
+                    android:text="6"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center">
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_7"
+                    android:text="7"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_8"
+                    android:text="8"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_9"
+                    android:text="9"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center">
+
+                <ImageButton
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_finger_print"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_fingerprint"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorPrimaryLight"/>
+
+                <Button
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_num_0"
+                    android:text="0"/>
+
+                <ImageButton
+                    style="@style/pass_code_button_style"
+                    android:id="@+id/btn_back_space"
+                    android:padding="20dp"
+                    android:src="@drawable/ic_backspace"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/colorPrimaryLight"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</layout>

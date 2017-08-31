@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+ext {
+    googleSupportVersion = '26.0.1'
+    archComponentsVersion = '1.0.0-alpha9'
+
+    bintrayRepo = 'maven'
+    bintrayName = 'passcodeview'
+
+    publishedGroupId = 'th.co.digio'
+    libraryName = 'PasscodeView'
+    artifact = 'passcodeview'
+
+    libraryDescription = 'A passcodeview'
+
+    siteUrl = 'https://bitbucket.org/nopphorn/digio-uv-mobile-android'
+    gitUrl = 'https://prathanbomb@bitbucket.org/nopphorn/digio-uv-mobile-android.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'prathanbomb'
+    developerName = 'Supitsara Prathan'
+    developerEmail = 'prathanbomb@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:design:$googleSupportVersion"
+    compile "com.android.support:appcompat-v7:$googleSupportVersion"
+    compile 'com.inthecheesefactory.thecheeselibrary:adjustable-imageview:1.0.1'
+
+    compile "android.arch.lifecycle:runtime:$archComponentsVersion"
+    compile "android.arch.lifecycle:extensions:$archComponentsVersion"
+    compile "android.arch.persistence.room:runtime:$archComponentsVersion"
+    compile "android.arch.persistence.room:rxjava2:$archComponentsVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$archComponentsVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$archComponentsVersion"
+
+    kapt 'com.android.databinding:compiler:3.0.0-beta3'
+
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(Javadoc) {
+    enabled = false
+}
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PassCodeView">
+        <attr name="digits" format="integer"/>
+        <attr name="filled_drawable" format="reference"/>
+        <attr name="empty_drawable" format="reference"/>
+        <attr name="digit_size" format="dimension"/>
+        <attr name="error_message_visible" format="boolean"/>
+        <attr name="error_message_text" format="string"/>
+        <attr name="error_message_size" format="dimension"/>
+        <attr name="error_message_color" format="color"/>
+        <attr name="key_text_size" format="dimension"/>
+        <attr name="key_text_color" format="color"/>
+        <attr name="divider_visible" format="boolean"/>
+        <attr name="digit_spacing" format="dimension"/>
+        <attr name="digit_vertical_padding_top" format="dimension"/>
+        <attr name="digit_vertical_padding_bottom" format="dimension"/>
+    </declare-styleable>
+</resources>
