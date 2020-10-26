@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PasscodeView.iml" filepath="$PROJECT_DIR$/PasscodeView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/passcodeview/passcodeview.iml" filepath="$PROJECT_DIR$/passcodeview/passcodeview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PasscodeView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PasscodeView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/passcodeview/PasscodeView.passcodeview.iml" filepath="$PROJECT_DIR$/.idea/modules/passcodeview/PasscodeView.passcodeview.iml" />
     </modules>
   </component>
 </project>

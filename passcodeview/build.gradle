@@ -3,16 +3,16 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
     }
     buildTypes {
@@ -27,12 +27,13 @@ android {
     lintOptions {
         abortOnError false
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 ext {
-    googleSupportVersion = '26.0.1'
-    archComponentsVersion = '1.0.0-alpha9'
-
     bintrayRepo = 'maven'
     bintrayName = 'passcodeview'
 
@@ -42,10 +43,10 @@ ext {
 
     libraryDescription = 'A passcodeview'
 
-    siteUrl = 'https://bitbucket.org/nopphorn/digio-uv-mobile-android'
-    gitUrl = 'https://prathanbomb@bitbucket.org/nopphorn/digio-uv-mobile-android.git'
+    siteUrl = 'https://github.com/prathanbomb/PasscodeView'
+    gitUrl = 'https://github.com/prathanbomb/PasscodeView.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.3'
 
     developerId = 'prathanbomb'
     developerName = 'Supitsara Prathan'
@@ -61,25 +62,25 @@ kapt {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:design:$googleSupportVersion"
-    compile "com.android.support:appcompat-v7:$googleSupportVersion"
-    compile 'com.inthecheesefactory.thecheeselibrary:adjustable-imageview:1.0.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.inthecheesefactory.thecheeselibrary:adjustable-imageview:1.0.1'
 
-    compile "android.arch.lifecycle:runtime:$archComponentsVersion"
-    compile "android.arch.lifecycle:extensions:$archComponentsVersion"
-    compile "android.arch.persistence.room:runtime:$archComponentsVersion"
-    compile "android.arch.persistence.room:rxjava2:$archComponentsVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$archComponentsVersion"
-    annotationProcessor "android.arch.lifecycle:compiler:$archComponentsVersion"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation 'androidx.room:room-rxjava2:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0'
 
-    kapt 'com.android.databinding:compiler:3.0.0-beta3'
+    kapt 'androidx.databinding:databinding-compiler:4.1.0'
 
-    testCompile 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testImplementation 'junit:junit:4.13.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
     mavenCentral()

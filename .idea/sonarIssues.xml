@@ -3,7 +3,27 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AndroidUtilCode/framework/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AndroidUtilCode/local.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/th/co/digio/passcodeview/MainActivity.kt">
           <value>
             <set />
           </value>
@@ -19,6 +39,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/passcodeview/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../tmb_uv/app/build.gradle">
           <value>
             <set />
           </value>
